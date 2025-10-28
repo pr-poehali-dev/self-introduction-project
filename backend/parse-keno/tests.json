@@ -1,0 +1,23 @@
+{
+  "tests": [
+    {
+      "name": "OPTIONS request for CORS",
+      "method": "OPTIONS",
+      "path": "/",
+      "expectedStatus": 200,
+      "expectedHeaders": {
+        "Access-Control-Allow-Origin": "*"
+      }
+    },
+    {
+      "name": "POST request starts parsing",
+      "method": "POST",
+      "path": "/",
+      "expectedStatus": 200,
+      "expectedHeaders": {
+        "Content-Type": "text/event-stream",
+        "Access-Control-Allow-Origin": "*"
+      }
+    }
+  ]
+}
